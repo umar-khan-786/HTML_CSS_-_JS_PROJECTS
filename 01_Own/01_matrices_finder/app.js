@@ -3,6 +3,9 @@ const rowsError = document.querySelector(".rows_error");
 const colsError = document.querySelector(".cols_error");
 const elemsError = document.querySelector(".elems_error");
 const mainBox = document.querySelector(".box_container");
+const formContainer = mainBox.children[0];
+const resultContainer = mainBox.children[1];
+const refreshButton = document.querySelector(".refresh");
 
 function fetchData(e) {
   e.preventDefault();
@@ -75,44 +78,70 @@ function removeError(rows, cols, elems) {
 function checkTypeOfMatrix(rows, cols, elems, arr) {
   if (checkSquareMatrix(rows, cols)) {
     if (checkNullMatrix(elems)) {
-      console.log("null matrix");
+      setMessage("null matrix", arr, rows, cols);
     } else if (checkIdentityMatrix(arr, rows, cols)) {
-      console.log("Indentity matrix");
+      setMessage("Indentity matrix", arr, rows, cols);
     } else if (checkScalarMatrix(arr, rows, cols)) {
-      console.log("Scalar matrix");
+      setMessage("Scalar matrix", arr, rows, cols);
     } else if (checkDiagonalMatrix(arr, rows, cols)) {
-      console.log("Diagonal Matrix");
+      setMessage("Diagonal Matrix", arr, rows, cols);
     } else if (checkSymmetricMatrix(arr, rows, cols)) {
-      console.log("Symmetric matrix");
+      setMessage("Symmetric matrix", arr, rows, cols);
     } else if (checkSkewSymmetricMatrix(arr, rows, cols)) {
-      console.log("Skew Symmetric matrix");
+      setMessage("Skew Symmetric matrix", arr, rows, cols);
     } else if (checkHermitionMatrix(arr, rows, cols)) {
-      console.log("Hermition matrix");
+      setMessage("Hermition matrix", arr, rows, cols);
     } else {
-      console.log("square matrix");
+      setMessage("square matrix", arr, rows, cols);
     }
   } else if (checkRectangularMatrix(rows, cols)) {
     if (checkNullMatrix(elems)) {
-      console.log("null matrix");
+      setMessage("null matrix", arr, rows, cols);
     } else {
-      console.log("Rectangular matrix");
+      setMessage("Rectangular matrix", arr, rows, cols);
     }
   } else if (checkColMatrix(cols)) {
     if (checkNullMatrix(elems)) {
-      console.log("null matrix");
+      setMessage("null matrix", arr, rows, cols);
     } else {
-      console.log("column matrix");
+      setMessage("column matrix", arr, rows, cols);
     }
   } else if (checkRowMatrix(rows)) {
     if (checkNullMatrix(elems)) {
-      console.log("null matrix");
+      setMessage("null matrix", arr, rows, cols);
     } else {
-      console.log("row matrix");
+      setMessage("row matrix", arr, rows, cols);
     }
   }
-  checkSkewHermitionMatrix(arr, rows, cols);
+  // checkSkewHermitionMatrix(arr, rows, cols);
 }
 
+function setMessage(message, arr, rows, cols) {
+  showMatrix(arr, rows, cols);
+  showOutput(message, rows, cols);
+}
+
+function showMatrix(arr, rows, cols) {
+  for (let i = 0; i < parseInt(rows); i++) {
+    const p = document.createElement("p");
+    for (let j = 0; j < parseInt(cols); j++) {
+      const span = document.createElement("span");
+      span.innerText = arr[i][j];
+      p.appendChild(span);
+    }
+    document.querySelector(".matrix_data").appendChild(p);
+  }
+}
+
+function showOutput(message, rows, cols) {
+  const span = document.createElement("span");
+  span.innerHTML = `<b>M</b> is the <b>${message
+    .charAt(0)
+    .toUpperCase()}${message.slice(1)}</b> of order <b>${rows}-by-${cols}</b>`;
+  document.querySelector(".result p").appendChild(span);
+  resultContainer.style.display = "block";
+  formContainer.style.display = "none";
+}
 function checkRowMatrix(rows) {
   return rows === "1";
 }
@@ -211,10 +240,14 @@ function conjugateOfMatrix(arr, rows, cols) {
   for (let i = 0; i < parseInt(rows); i++) {
     const tempArr = [];
     for (let j = 0; j < parseInt(cols); j++) {
-      if (arr[i][j].includes("+")) {
-        tempArr.push(arr[i][j].replace("+i", "-i"));
-      } else if (arr[i][j].includes("-")) {
-        tempArr.push(arr[i][j].replace("-i", "+i"));
+      if (arr[i][j].includes("i")) {
+        if (arr[i][j].includes("+")) {
+          tempArr.push(arr[i][j].replace("+", "-"));
+        } else if (arr[i][j].includes("-")) {
+          tempArr.push(arr[i][j].replace("-", "+"));
+        } else {
+          tempArr.push(`-${arr[i][j]}`);
+        }
       } else {
         tempArr.push(arr[i][j]);
       }
@@ -252,4 +285,15 @@ function checkSkewHermitionMatrix(arr, rows, cols) {
   }
   return true;
 }
+
+function resetData() {
+  resultContainer.style.display = "none";
+  formContainer.style.display = "block";
+  document.querySelector(".matrix_data").innerHTML = "";
+  document.querySelector(".result p").innerHTML = "";
+  document.querySelector(".no_of_rows").value = "";
+  document.querySelector(".no_of_cols").value = "";
+  document.querySelector(".no_of_elems").value = "";
+}
 form.addEventListener("submit", fetchData);
+refreshButton.addEventListener("click", resetData);

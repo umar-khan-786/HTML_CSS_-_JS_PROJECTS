@@ -18,14 +18,74 @@ body {
     background: #9A9EDE;
     display: flex;
     align-items: center;
+    justify-content: space-between;
 }
 
-.box_container .form_container {
+.box_container .form_container,
+.box_container .result_div {
     width: 350px;
     height: 400px;
     background: #fff;
     margin-left: 20px;
     box-shadow: 0 0 3px rgba(0, 0, 0, 0.4);
+}
+
+.box_container .result_div {
+    padding: 10px 0;
+    text-align: center;
+}
+
+.result_div .matrix {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    padding: 5px 0;
+}
+
+.result_div .matrix .matrix_data {
+    border-left: 2px solid #000;
+    border-right: 2px solid #000;
+    position: relative;
+}
+
+.result_div .matrix .matrix_data p span {
+    padding: 3px 10px;
+}
+
+.result_div .matrix .matrix_data::before,
+.result_div .matrix .matrix_data::after,
+.result_div .matrix .matrix_data p::before,
+.result_div .matrix .matrix_data p::after {
+    content: '';
+    width: 5px;
+    height: 2px;
+    background: #000;
+    position: absolute;
+}
+
+.result_div .matrix .matrix_data::before {
+    left: 0;
+    top: 0;
+}
+
+.result_div .matrix .matrix_data::after {
+    right: 0;
+    top: 0;
+}
+
+.result_div .matrix .matrix_data p::before {
+    bottom: 0;
+    left: 0;
+}
+
+.result_div .matrix .matrix_data p::after {
+    bottom: 0;
+    right: 0;
+}
+
+.result_div .result {
+    margin-bottom: 10px;
 }
 
 .box_container .form_container form {
@@ -67,4 +127,24 @@ body {
 
 .btn_submit:hover {
     box-shadow: 2px 2px 9px #ff73b2bd;
+}
+
+.content {
+    width: 400px;
+    color: #fff;
+}
+
+.content h1 {
+    text-transform: capitalize;
+    padding: 2px 0;
+}
+
+.content p {
+    padding: 5px 0;
+}
+
+.content ul {
+    text-transform: capitalize;
+    list-style: circle;
+    padding: 0 20px;
 }
