@@ -100,7 +100,8 @@ ul li.checked::before {
     background-image: url(Images/checked.png);
 }
 
-ul li button {
+ul li button,
+ul li span {
     position: absolute;
     right: 20px;
     border: 0;
@@ -114,6 +115,13 @@ ul li button {
     transition: all .2s;
 }
 
-ul li button:hover {
+ul li span {
+    right: 50px;
+    font-size: 14px;
+    text-align: center;
+}
+
+ul li button:hover,
+ul li span:hover {
     background: #e8e8e8;
 }

@@ -1,18 +1,32 @@
 const input = document.querySelector(".add_item input");
 const addButton = document.querySelector(".add_item button");
 const listItems = document.querySelector(".list_items");
-
+let isEdit = false;
+let replaceItem = null;
 function addItem() {
-  if (input.value) {
-    const li = document.createElement("li");
-    const btn = document.createElement("button");
-    btn.innerHTML = "&times;";
-    li.innerHTML = input.value;
-    li.appendChild(btn);
-    listItems.appendChild(li);
+  const li = document.createElement("li");
+  const btn = document.createElement("button");
+  const span = document.createElement("span");
+  span.innerHTML = "&#9998;";
+  btn.innerHTML = "&times;";
+
+  if (input.value && isEdit) {
+    replaceItem.innerHTML = input.value;
+    replaceItem.appendChild(span);
+    replaceItem.appendChild(btn);
     saveData();
-    input.value = "";
+    replaceItem = null;
+    isEdit = false;
+  } else {
+    if (input.value) {
+      li.innerHTML = input.value;
+      li.appendChild(span);
+      li.appendChild(btn);
+      listItems.appendChild(li);
+      saveData();
+    }
   }
+  input.value = "";
 }
 
 function manipulateItem(e) {
@@ -22,7 +36,13 @@ function manipulateItem(e) {
   }
   if (e.target.tagName === "BUTTON") {
     e.target.parentElement.remove();
+    isEdit = false;
     saveData();
+  }
+  if (e.target.tagName === "SPAN") {
+    input.value = e.target.parentElement.childNodes[0].data;
+    replaceItem = e.target.parentElement;
+    isEdit = true;
   }
 }
 
