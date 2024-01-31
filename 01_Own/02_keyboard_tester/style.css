@@ -1,0 +1,99 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(160deg, #98E4FF, #687EFF);
+    overflow: hidden;
+}
+
+.container {
+    width: 100%;
+    max-width: 90%;
+    margin: 50px auto 0;
+    border-radius: 10px;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.container .keys .row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 10px;
+    position: relative;
+}
+
+.container .keys .col {
+    display: flex;
+    gap: 8px;
+    margin-right: 30px;
+}
+
+.keys .key {
+    min-width: 40px;
+    height: 45px;
+    padding: 11px;
+    border: 1px solid #fff;
+    border-radius: 5px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-weight: 400;
+    font-size: 16px;
+}
+
+.space {
+    width: 380px;
+}
+
+.arrows {
+    position: absolute;
+    top: 10px;
+    right: 65px;
+}
+
+.shift {
+    width: 200px;
+}
+
+.keys .down {
+    min-width: 50px;
+}
+
+.caps,
+.enter {
+    width: 170px;
+}
+
+.tab {
+    width: 160px;
+}
+
+.keys .large {
+    width: 120px;
+}
+
+.back {
+    width: 160px;
+}
+
+.tick {
+    width: 120px;
+}
+
+.keys .key.active_down {
+    background: #98E4FF;
+}
+
+.keys .key.active_up {
+    background: #fff;
+    color: #000;
+}

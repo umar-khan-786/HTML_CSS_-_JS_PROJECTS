@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>KEYBOARD-Tester</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="app.js" defer></script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="keys">
+        <div class="row">
+          <div class="col">
+            <div class="key" data-value="Escape">Esc</div>
+          </div>
+
+          <div class="col">
+            <div class="key" data-value="F1">F1</div>
+            <div class="key" data-value="F2">F2</div>
+            <div class="key" data-value="F3">F3</div>
+            <div class="key" data-value="F4">F4</div>
+          </div>
+
+          <div class="col">
+            <div class="key" data-value="F5">F5</div>
+            <div class="key" data-value="F6">F6</div>
+            <div class="key" data-value="F7">F7</div>
+            <div class="key" data-value="F8">F8</div>
+          </div>
+
+          <div class="col">
+            <div class="key" data-value="F9">F9</div>
+            <div class="key" data-value="F10">F10</div>
+            <div class="key" data-value="F11">F11</div>
+            <div class="key" data-value="F12">F12</div>
+          </div>
+
+          <div class="col">
+            <div class="key" data-value="Home">Home</div>
+            <div class="key" data-value="End">End</div>
+            <div class="key" data-value="Insert">Insert</div>
+            <div class="key" data-value="Delete">Delete</div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col">
+            <div class="key tick" data-value="`">~<br />`</div>
+          </div>
+          <div class="col">
+            <div class="key down" data-value="1">!<br />1</div>
+            <div class="key down" data-value="2">@<br />2</div>
+            <div class="key down" data-value="3">#<br />3</div>
+            <div class="key down" data-value="4">$<br />4</div>
+            <div class="key down" data-value="5">%<br />5</div>
+            <div class="key down" data-value="6">^<br />6</div>
+            <div class="key down" data-value="7">&<br />7</div>
+            <div class="key down" data-value="8">*<br />8</div>
+            <div class="key down" data-value="9">(<br />9</div>
+            <div class="key down" data-value="0">)<br />0</div>
+            <div class="key down" data-value="-">_<br />-</div>
+            <div class="key down" data-value="=">+<br />=</div>
+          </div>
+          <div class="col">
+            <div class="key back" data-value="Backspace">Backspace</div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col">
+            <div class="key tab" data-value="Tab">Tab</div>
+          </div>
+          <div class="col">
+            <div class="key down" data-value="q">Q</div>
+            <div class="key down" data-value="w">W</div>
+            <div class="key down" data-value="e">E</div>
+            <div class="key down" data-value="r">R</div>
+            <div class="key down" data-value="t">T</div>
+            <div class="key down" data-value="y">Y</div>
+            <div class="key down" data-value="u">U</div>
+            <div class="key down" data-value="i">I</div>
+            <div class="key down" data-value="o">O</div>
+            <div class="key down" data-value="p">P</div>
+            <div class="key down" data-value="[">{<br />[</div>
+            <div class="key down" data-value="]">}<br />]</div>
+          </div>
+          <div class="col">
+            <div class="key large" data-value="\">|<br />\</div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col">
+            <div class="key caps" data-value="CapsLock">CapsLock</div>
+          </div>
+          <div class="col">
+            <div class="key down" data-value="a">A</div>
+            <div class="key down" data-value="s">S</div>
+            <div class="key down" data-value="d">D</div>
+            <div class="key down" data-value="f">F</div>
+            <div class="key down" data-value="g">G</div>
+            <div class="key down" data-value="h">H</div>
+            <div class="key down" data-value="j">J</div>
+            <div class="key down" data-value="k">K</div>
+            <div class="key down" data-value="l">L</div>
+            <div class="key down" data-value=";">:<br />;</div>
+            <div class="key down" data-value="'">"<br />'</div>
+          </div>
+          <div class="col">
+            <div class="key enter" data-value="Enter">Enter</div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col">
+            <div class="key shift" data-value="Shift">Shift</div>
+          </div>
+          <div class="col">
+            <div class="key down" data-value="z">Z</div>
+            <div class="key down" data-value="x">X</div>
+            <div class="key down" data-value="c">C</div>
+            <div class="key down" data-value="v">V</div>
+            <div class="key down" data-value="b">B</div>
+            <div class="key down" data-value="n">N</div>
+            <div class="key down" data-value="m">M</div>
+            <div class="key down" data-value=","><<br />,</div>
+            <div class="key down" data-value=".">><br />.</div>
+            <div class="key down" data-value="/">?<br />/</div>
+          </div>
+          <div class="col">
+            <div class="key shift" data-value="Shift">Shift</div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col">
+            <div class="key" data-value="Unidentified">Fn</div>
+            <div class="key" data-value="Control">Ctrl</div>
+            <div class="key" data-value="Meta">Window</div>
+            <div class="key" data-value="Alt">Alt</div>
+          </div>
+          <div class="col">
+            <div class="key space" data-value=" "></div>
+          </div>
+          <div class="col">
+            <div class="key" data-value="Alt">Alt</div>
+            <div class="key" data-value="PrtSc">PrtSc</div>
+            <div class="key" data-value="Control">Ctrl</div>
+            <div class="key" data-value="PageUp">PgUp</div>
+            <div class="key" data-value="ArrowUp">&#8593;</div>
+            <div class="key" data-value="PageDown">PgDn</div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col">
+            <div class="key" style="border: 0"></div>
+          </div>
+          <div class="col arrows">
+            <div class="key" data-value="ArrowLeft">&#8592;</div>
+            <div class="key" data-value="ArrowDown">&#8595;</div>
+            <div class="key" data-value="ArrowRight">&#8594;</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
