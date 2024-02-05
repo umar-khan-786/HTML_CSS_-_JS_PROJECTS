@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+    <script
+      src="https://kit.fontawesome.com/c3d319de8a.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="app.js" defer></script>
+  </head>
+  <body>
+    <header>
+      <nav class="navbar">
+        <ul class="nav_list">
+          <li class="list_item"><a href="index.html">home</a></li>
+          <li class="list_item"><a href="#">about</a></li>
+          <li class="list_item"><a href="#">contact</a></li>
+          <li class="list_item login"><a href="login.html">login</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <section class="register_container">
+        <img src="images/Figure.png" alt="" />
+        <div class="form_container">
+          <h1>Registeration Form</h1>
+          <form action="">
+            <div class="user_name">
+              <label for="name">Name</label>
+              <input type="text" id="name" placeholder="Enter your name" />
+            </div>
+            <div class="user_mobile">
+              <label for="mobile">Mobile No.</label>
+              <input
+                type="text"
+                id="mobile"
+                placeholder="Enter your mobile no"
+              />
+            </div>
+            <div class="user_cnic">
+              <label for="cnic">CNIC</label>
+              <input type="text" placeholder="Enter your CNIC" id="cnic" />
+            </div>
+            <div class="user_password">
+              <label for="password">Password</label>
+              <input
+                type="password"
+                placeholder="Enter your password"
+                id="password"
+              />
+              <i class="fa-solid fa-eye show_hide"></i>
+            </div>
+            <div class="user_age">
+              <label for="age">Age</label>
+              <input type="date" placeholder="Enter your age" id="age" />
+            </div>
+            <button class="submit_btn btn">Submit</button>
+          </form>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
