@@ -1,0 +1,206 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+.container {
+    max-width: 80%;
+    width: 100%;
+    margin: 50px auto;
+}
+
+.container .heading {
+    width: 100%;
+    text-align: center;
+    color: #fff;
+    background: goldenrod;
+    padding: 20px 0;
+    border-radius: 5px 5px 0 0;
+}
+
+.container .heading h1 {
+    font-size: 30px;
+    font-weight: 700;
+}
+
+.container .main {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    border-left: 1px solid goldenrod;
+    border-right: 1px solid goldenrod;
+    border-bottom: 1px solid goldenrod;
+}
+
+.main .products_container {
+    width: 60%;
+    padding: 20px 10px;
+    border-right: 1px solid goldenrod;
+}
+
+.main .products_container h3 {
+    font-size: 25px;
+    text-align: center;
+    font-weight: 600;
+}
+
+.main .products_container .products {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 20px 0;
+    gap: 20px;
+}
+
+.products .product {
+    width: 265px;
+    height: 250px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    border-radius: 5px;
+}
+
+.products .product img {
+    width: 100%;
+    height: 170px;
+    border-radius: 5px 5px 0 0;
+}
+
+.products .product .brand {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 5px;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.products .product button {
+    width: 100%;
+    height: 37px;
+    border: 0;
+    outline: 0;
+    background: goldenrod;
+    color: #fff;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 600;
+    border-radius: 0 0 5px 5px;
+}
+
+.main .cart_container {
+    flex: 1;
+    padding: 20px 10px;
+}
+
+.main .cart_container .cart_head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.main .cart_container .cart_head h3 {
+    font-size: 25px;
+    text-align: center;
+    font-weight: 600;
+}
+
+.main .cart_container .cart_head p {
+    position: relative;
+    font-size: 20px;
+}
+
+.main .cart_container .cart_head p span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 19px;
+    height: 19px;
+    background: goldenrod;
+    border-radius: 50%;
+    font-size: 14px;
+    font-weight: 600;
+    color: #fff;
+    position: absolute;
+    top: -3px;
+    left: -4px;
+}
+
+.cart_container .cart_items {
+    padding: 10px 5px;
+}
+
+.cart_items .item {
+    width: 100%;
+    height: 100px;
+    box-shadow: 0 2px 3px rgba(0, 0, 0, 0.3);
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.cart_items .item img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    border: 2px solid goldenrod;
+    padding: 2px;
+    margin-left: 10px;
+}
+
+.cart_items .item .description {
+    margin-right: 10px;
+}
+
+.cart_items .item .description h4 {
+    padding: 3px 0;
+    font-size: 17px;
+}
+
+.cart_items .item .description h5 {
+    padding: 4px 0;
+}
+
+.cart_items .item .description h5 span {
+    color: goldenrod;
+}
+
+.cart_items .item .description input {
+    width: 50px;
+    height: 30px;
+    outline: 0;
+    padding: 5px;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.cart_items .item .delete {
+    width: 40px;
+    height: 40px;
+    background: goldenrod;
+    color: #fff;
+    font-size: 20px;
+    font-weight: 600;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.cart_container .total {
+    width: 100%;
+    border-top: 2px solid goldenrod;
+    border-bottom: 2px solid goldenrod;
+    padding: 5px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 20px;
+    font-weight: 600;
+}
