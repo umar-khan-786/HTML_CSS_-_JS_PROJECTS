@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login-System</title>
+    <link rel="stylesheet" href="style.css" />
+    <script
+      src="https://kit.fontawesome.com/c3d319de8a.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="app.js" defer></script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="form_container">
+        <div class="head">
+          <div class="sign_in button">
+            <i class="fa-solid fa-user"></i>
+            <span>Sign In</span>
+          </div>
+          <div class="sign_up active button">
+            <i class="fa-solid fa-user-plus"></i>
+            <span>Sign Up</span>
+          </div>
+        </div>
+        <div class="body">
+          <form action="">
+            <div class="row">
+              <i class="fa-regular fa-circle-user"></i>
+              <input
+                required
+                type="text"
+                id="username"
+                placeholder="Username"
+              />
+            </div>
+            <div class="row">
+              <i class="fa-regular fa-envelope"></i>
+              <input required type="email" id="email" placeholder="Email" />
+            </div>
+            <div class="row">
+              <i class="fa-solid fa-lock"></i>
+              <input
+                required
+                type="password"
+                id="password"
+                placeholder="Password"
+              />
+            </div>
+            <div class="row">
+              <i class="fa-regular fa-square-check"></i>
+              <input
+                required
+                type="password"
+                id="confpassword"
+                placeholder="Confirm Password"
+              />
+            </div>
+            <p class="error hide">Something went wrong</p>
+            <button class="btn_submit">
+              <i class="fa-solid fa-user-plus"></i>
+              <span>Sign Up</span>
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
